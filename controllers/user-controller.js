@@ -99,7 +99,7 @@ const userController = {
           }
         )
           .then(() => {
-            // delete all thoughts for single user 
+            // delete all thoughts for single user
             Thought.deleteMany({
               username: dbUserData.username,
             })

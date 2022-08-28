@@ -13,14 +13,16 @@ const thoughtController = {
   // get one thought by id
   getThoughtsById({ params }, res) {
     Thought.findOne({
-      _id: params.id,
+      _id: params.thoughtId,
     })
-      .select(-__v)
-      .sort({ _id: -1 })
+      .select("-__v")
+      .sort({
+        _id: -1,
+      })
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
           res.status(404).json({
-            message: "😖 No thought found with this id",
+            message: "Not a single thought found with this id 🙃",
           });
           return;
         }
@@ -97,7 +99,7 @@ const thoughtController = {
       .then((deletedThought) => {
         if (!deletedThought) {
           return res.status(404).json({
-            message: "Not a single thought found with this id 🙃",
+            message: "No thought with this id!",
           });
         }
         return User.findOneAndUpdate(
