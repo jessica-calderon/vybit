@@ -99,7 +99,7 @@ const thoughtController = {
       .then((deletedThought) => {
         if (!deletedThought) {
           return res.status(404).json({
-            message: "No thought with this id!",
+            message: "Not a single thought found with this id 🙃",
           });
         }
         return User.findOneAndUpdate(
@@ -112,7 +112,7 @@ const thoughtController = {
             },
           },
           {
-            new: true,
+            new: true
           }
         );
       })
