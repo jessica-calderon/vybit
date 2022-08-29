@@ -20,7 +20,7 @@ A back-end API for a social network in which users can manage thoughts, reaction
 JavaScript, Node.js, MongoDB, Mongoose, NoSQL
 
 ## [Usage](#table-of-contents)
-Users can create, delete, and update user accounts. Create, update, and delete thoughts and reactions, and add or remove friends via API database at `localhost:3001/api` with future implementation for a front-end social media network.
+Users can create, delete, and update user accounts. Create, update, and delete thoughts and reactions, and add or remove friends via API database at `localhost:3001/api` - with future implementation plans for a front-end social media network.
 ## [Contributing](#table-of-contents)
 
 Thank you for your interest in contributing to this project, however, I am currently not accepting third party contributions.
